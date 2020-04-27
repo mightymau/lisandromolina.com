@@ -1,5 +1,7 @@
 body {
   margin:0;
+  background-color: #F8F6F4;
+  padding:0 10%;
 }
 ul {
   list-style: none;
@@ -9,6 +11,12 @@ li {
   padding:10px;
 }
 section {
-  border:1px solid black;
   height: 100vh;
+}
+#intro {
+  background-image: url("/img/intro.png");
+  background-repeat: no-repeat;
+}
+h1 {
+  color: #D2462F;
 }

@@ -24,8 +24,8 @@ section {
   min-height: 100vh;
   padding: 0 10%;
 }
-#intro {
 
+#intro {
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: 130% 45%;
@@ -34,7 +34,6 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 #intro p, h1, h2 {
   width: 60%;

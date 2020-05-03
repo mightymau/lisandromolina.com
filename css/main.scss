@@ -1,3 +1,4 @@
+
 body {
   margin:0;
   padding:0;
@@ -16,13 +17,23 @@ nav {
     justify-content: flex-end;
   }
   li {
-    padding:10px;
+    padding: 5px 10px;
+    background-color: #C4FCCA;
+    border-radius: 5px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+  .active, .btn:hover {
+    background-color: #9DDBA3;
   }
 }
 
 section {
   min-height: 100vh;
   padding: 0 10%;
+  scroll-behavior: smooth;
 }
 
 #intro {
@@ -34,19 +45,38 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  p, h1, h2 {
+    width: 60%;
+  }
+
+  #linkbelow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    text-align: center;
+    font-size: 1em;
+    background: url('/img/arrow_down.png') no-repeat center;
+    height: 100px;
+
+  }
 }
-#intro p, h1, h2 {
-  width: 60%;
-}
+
+
 #portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1em;
+
+  h1 {
+    width: 60%;
+  }
 }
 
 
 /** Font Style **/
-p,h1,h2,h3 {
+h1,h2,h3 {
   padding: 0;
   margin: 0;
   font-family: 'Playfair Display', serif;
@@ -81,4 +111,50 @@ li {
   background-color: #FCF2E6;
   padding: 2em;
 
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-device-width : 480px) {
+/* Styles */
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+
+  }
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 1rem;
+  }
+  #intro {
+    background-size: 80%;
+    background-position: 130% 10%;
+
+    p, h1, h2 {
+      width: 100%;
+    }
+
+    #linkbelow {
+
+      font-size: 0.75em;
+      background: url('/img/arrow_down.png') no-repeat center;
+
+
+    }
+  }
+
+
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
 }

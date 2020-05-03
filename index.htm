@@ -7,14 +7,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lisandro Molina - UI/UX Designer and Front-end Developer</title>
   <link rel="stylesheet" href="/css/main.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:ital,wght@0,900;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:ital,wght@0,900;1,600&display=swap" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+  </script>
+
+</head>
 <body>
   <nav>
-    <ul>
-      <li>About</li>
-      <li>Skills</li>
-      <li>Portfolio</li>
-      <li>Hire Me!</li>
+    <ul id="nav">
+      <li class="btn active"><a href="#intro">About Me</a></li>
+      <li class="btn"><a href="#skills">Skills</a></li>
+      <li class="btn"><a href="#portfolio">Portfolio</a></li>
+      <li class="btn"><a href="#contact">Hire Me!</a></li>
     </ul>
   </nav>
   <section id="intro">
@@ -22,6 +52,7 @@
     <h2>Web Developer and UI/UX Designer</h2>
     <p>For over 20 years I’ve developed brands, campaigns, and digital products and services for global brands, organisations and technology startups.</p>
     <p>I help my clients deliver integrated digital, print and brand experiences across all channels, driving revenue, conversion and engagement.</p>
+    <p id="linkbelow"><a href="#skills">Check out my skills and some of my works below</a></p>
   </section>
   <section id="skills">
     <h1>Skills</h1>
@@ -87,7 +118,22 @@
   </section>
   <section id="contact">
     <h1>Lets work together!</h1>
-    <p>You can contact me at mightymau@gmail.com</p>
+    <p>If you would like to hire me or discuss a project, you can contact me at mightymau@gmail.com</p>
+    <p>LinkedIn</p>
   </section>
+  <script>
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("nav");
+  var btns = header.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" active", "");
+    }
+    this.className += " active";
+    });
+  }
+  </script>
 </body>
 </html>

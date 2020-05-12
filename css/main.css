@@ -32,9 +32,14 @@ nav .active, nav .btn:hover {
   background-color: #9DDBA3;
 }
 
+a:visited {
+  color: #000;
+}
+
 section {
+  box-sizing: border-box;
+  padding: 5% 10%;
   min-height: 100vh;
-  padding: 0 10%;
   scroll-behavior: smooth;
 }
 
@@ -61,6 +66,20 @@ section {
   font-size: 1em;
   background: url("/img/arrow_down.png") no-repeat center;
   height: 100px;
+}
+
+#skills {
+  display: flex;
+  background-color: #C4FCCA;
+  min-height: 300px;
+}
+
+#skills h3 {
+  font-weight: 100;
+}
+
+#skills li {
+  list-style-type: none;
 }
 
 #portfolio {
@@ -113,9 +132,18 @@ li {
   padding: 2em;
 }
 
-/* Smartphones (portrait and landscape) ----------- */
+/* Smartphones (portrait) ----------- */
 @media only screen and (max-device-width: 480px) {
   /* Styles */
+  nav {
+    padding-right: 5%;
+  }
+  nav ul {
+    margin-top: 5px;
+  }
+  section {
+    padding-top: 10%;
+  }
   h1 {
     font-size: 3rem;
     line-height: 3rem;
@@ -141,8 +169,28 @@ li {
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) {
+@media only screen and (max-device-height: 375px) {
   /* Styles */
+  #intro h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  #intro h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  #intro p {
+    width: 80%;
+    font-size: 1rem;
+  }
+  #intro #linkbelow {
+    width: 20%;
+    height: 50px;
+    background-position: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-size: .75em;
+  }
 }
 
 /* Smartphones (portrait) ----------- */

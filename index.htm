@@ -9,14 +9,16 @@
   <link rel="stylesheet" href="/css/main.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:ital,wght@0,900;1,600&display=swap" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="/css/modal.css">
   <script>
   $(document).ready(function(){
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
 
       // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
+      if (this.hash !== "" && (this.hash == "#intro" || this.hash == "#skills" || this.hash == "#portfolio" || this.hash == "#contact"  )) {
         // Prevent default anchor click behavior
         event.preventDefault();
 
@@ -35,6 +37,7 @@
       } // End if
     });
   });
+
   </script>
 
 </head>
@@ -91,31 +94,42 @@
   <section id="portfolio">
     <h1>A selection of my work</h1>
     <div class="work">
-      <h3>This is the title</h3>
-      <p>this is the description.For over 20 years I’ve developed brands, campaigns, and digital products and services for global brands, organisations and technology startups.</p>
+      <h3><a class="opentab" href="http://www.toshiroac.com" target="_blank">Toshiro AC</a></h3>
+      <p>UI & UX Design, Bootstrap</p>
+      <img src="/img/portfolio/toshiro.png" />
     </div>
     <div class="work">
-      <h3>This is the title</h3>
-      <p>this is the description.For over 20 years I’ve developed brands, campaigns, and digital products and services for global brands, organisations and technology startups.</p>
+      <h3><a class="expand" href="#w1" rel="modal:open">BestCleaners</a></h3>
+      <p>UI & UX Design</p>
+      <img src="/img/portfolio/bestcleaners.png" />
+      <div id="w1" class="modal">
+        <p>BestCleaners Design</p>
+        <img src="/img/portfolio/bestcleaners_full.png" />
+      </div>
+
+
     </div>
     <div class="work">
-      <h3>This is the title</h3>
-      <p>this is the description.For over 20 years I’ve developed brands, campaigns, and digital products and services for global brands, organisations and technology startups.</p>
+      <h3><a class="expand" href="http://www.toshiroac.com" target="_blank">Kobi</a></h3>
+      <p>UI & UX Design</p>
+      <img src="/img/portfolio/kobi.png" />
+
     </div>
     <div class="work">
-      <h3>This is the title</h3>
-      <p>this is the description.For over 20 years I’ve developed brands, campaigns, and digital products and services for global brands, organisations and technology startups.</p>
+      <h3><a class="expand" href="http://www.toshiroac.com" target="_blank">RHS Tax Consultant</a></h3>
+      <p>UI & UX Design</p>
+      <img src="/img/portfolio/tax.png" />
     </div>
-    <div class="work">
-      <h3>This is the title</h3>
-      <p>this is the description.For over 20 years I’ve developed brands, campaigns, and digital products and services for global brands, organisations and technology startups.</p>
+    <div class="work soon">
+      <h3>PilipinasHotels</h3>
+      <p>Coming Soon</p>
     </div>
 
   </section>
   <section id="contact">
     <h1>Lets work together!</h1>
-    <p>If you would like to hire me or discuss a project, you can contact me at mightymau@gmail.com</p>
-    <p>LinkedIn</p>
+    <p>If you would like to hire me or discuss a project, you can contact me at <em><a href="mailto:mightymau@gmail.com">mightymau@gmail.com</a></em></p>
+
   </section>
   <script>
   // Add active class to the current button (highlight it)
@@ -130,6 +144,7 @@
     this.className += " active";
     });
   }
+
   </script>
 </body>
 </html>

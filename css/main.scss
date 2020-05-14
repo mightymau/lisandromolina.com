@@ -4,12 +4,12 @@ body {
   padding:0;
   background-image: linear-gradient(180deg, #cbffdc 0, #baffdc 16.67%, #abffda 33.33%, #9df2d5 50%, #92e3cf 66.67%, #89d5c9 83.33%, #83c9c4 100%);
 }
-
 nav {
   position: fixed;
   right: 0;
   width: 100%;
   padding-right: 10%;
+  z-index: 1;
   ul {
     list-style: none;
     display: flex;
@@ -29,9 +29,14 @@ nav {
     background-color: #9DDBA3;
   }
 }
+
 a:visited {
   color: #000;
 }
+a {
+  color: inherit;
+}
+
 section {
   box-sizing: border-box;
   padding: 5% 10%;
@@ -73,10 +78,6 @@ section {
   grid-template-rows: auto;
   background: url('/img/brush_bg.png') no-repeat center;
 
-  // background-color: #C4FCCA;
-  * {
-    //border:1px solid black;
-  }
   h1 {
     grid-column: 1 / 5;
     padding-bottom: 20px;
@@ -84,7 +85,6 @@ section {
   h3 {
     font-weight: 100;
     align-self: end;
-    font-size: 1rem;
     padding-right: 10px;
 
 
@@ -123,7 +123,49 @@ section {
   h1 {
     width: 60%;
   }
+  p {
+    margin-top: 3px;
+    opacity: 60%;
+    font-size: 14px;
+  }
+  a.opentab {
+    background: url('/img/link.png') no-repeat right;
+    background-size: 10px;
+    padding-right: 15px;
+  }
+  a.expand {
+    background: url('/img/expand.png') no-repeat right;
+    background-size: 10px;
+    padding-right: 15px;
+  }
+  .work {
+    box-sizing: border-box;
+    background-color: #FCF2E6;
+    padding: 1em;
+    border-radius: 10px 50px 10px 50px;
+
+  }
+  .soon {
+    opacity: 40%;
+  }
+
+  img {
+    //margin: 0 -2em -2em;
+    width: 100%;
+    border-radius: 0 0 0 40px;
+
+  }
+
 }
+
+#contact {
+  background: url('/img/letswork.png') no-repeat;
+  background-position: -100px bottom;
+  background-size: 65%;
+  height: 80vh;
+}
+
+
 
 
 /** Font Style **/
@@ -144,6 +186,9 @@ h2 {
   font-weight: 600;
   font-style: italic;
 }
+h3 {
+  font-style: italic;
+}
 p, li {
   font-family: 'Lato';
 }
@@ -152,17 +197,12 @@ p {
 }
 
 li {
-  text-transform: uppercase;
-  font-size: .75rem;
+  font-size: 1.25rem;
   font-weight: 500;
   margin: 2px;
 }
 
-.work {
-  background-color: #FCF2E6;
-  padding: 2em;
 
-}
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-device-width : 480px) {
@@ -240,6 +280,12 @@ li {
 
     }
   }
+  #contact {
+    background-position: -100px bottom;
+    background-size: 100%;
+  }
+
+
 
 
 

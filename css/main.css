@@ -9,6 +9,7 @@ nav {
   right: 0;
   width: 100%;
   padding-right: 10%;
+  z-index: 1;
 }
 
 nav ul {
@@ -34,6 +35,10 @@ nav .active, nav .btn:hover {
 
 a:visited {
   color: #000;
+}
+
+a {
+  color: inherit;
 }
 
 section {
@@ -83,7 +88,6 @@ section {
 #skills h3 {
   font-weight: 100;
   align-self: end;
-  font-size: 1rem;
   padding-right: 10px;
 }
 
@@ -125,6 +129,47 @@ section {
   width: 60%;
 }
 
+#portfolio p {
+  margin-top: 3px;
+  opacity: 60%;
+  font-size: 14px;
+}
+
+#portfolio a.opentab {
+  background: url("/img/link.png") no-repeat right;
+  background-size: 10px;
+  padding-right: 15px;
+}
+
+#portfolio a.expand {
+  background: url("/img/expand.png") no-repeat right;
+  background-size: 10px;
+  padding-right: 15px;
+}
+
+#portfolio .work {
+  box-sizing: border-box;
+  background-color: #FCF2E6;
+  padding: 1em;
+  border-radius: 10px 50px 10px 50px;
+}
+
+#portfolio .soon {
+  opacity: 40%;
+}
+
+#portfolio img {
+  width: 100%;
+  border-radius: 0 0 0 40px;
+}
+
+#contact {
+  background: url("/img/letswork.png") no-repeat;
+  background-position: -100px bottom;
+  background-size: 65%;
+  height: 80vh;
+}
+
 /** Font Style **/
 h1, h2, h3 {
   padding: 0;
@@ -145,6 +190,10 @@ h2 {
   font-style: italic;
 }
 
+h3 {
+  font-style: italic;
+}
+
 p, li {
   font-family: 'Lato';
 }
@@ -154,15 +203,9 @@ p {
 }
 
 li {
-  text-transform: uppercase;
-  font-size: .75rem;
+  font-size: 1.25rem;
   font-weight: 500;
   margin: 2px;
-}
-
-.work {
-  background-color: #FCF2E6;
-  padding: 2em;
 }
 
 /* Smartphones (portrait) ----------- */
@@ -228,6 +271,10 @@ li {
   #skills h3:nth-of-type(4) {
     grid-column: 2;
     grid-row: 4;
+  }
+  #contact {
+    background-position: -100px bottom;
+    background-size: 100%;
   }
 }
 

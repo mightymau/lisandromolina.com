@@ -27,7 +27,7 @@
 <body>
   <section id="error404">
     <h1>I dont have this page!</h1>
-    <p>The page you requested could not be found. What are you doing typing this address anyway? <a href="index.htm">Go Home!</a><p>
+    <p>The page you requested could not be found. What are you doing typing this address anyway? Or maybe I broke something?  <a href="index.htm">Go Home!</a><p>
   </section>
 </body>
 </html>

@@ -22,38 +22,13 @@
   <title>Lisandro Molina - UI/UX Designer and Front-end Developer</title>
   <link rel="stylesheet" href="/css/main.min.css">
   <link rel="stylesheet" href="/css/modal.css">
-
+  <link rel="stylesheet" href="/css/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:ital,wght@0,900;1,600&display=swap" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- jQuery Modal -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "" && (this.hash == "#intro" || this.hash == "#skills" || this.hash == "#portfolio" || this.hash == "#contact"  )) {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-
-        // Store hash
-        var hash = this.hash;
-
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 200, function(){
-
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
-    });
-  });
-
-  </script>
+  <script src="/js/custom.js"></script>
+  <script src="/js/aos.js"></script>
 
 </head>
 <body>
@@ -66,13 +41,13 @@
     </ul>
   </nav>
   <section id="intro">
-    <h1>Lisandro Molina</h1>
-    <h2>Web Developer and UI/UX Designer</h2>
-    <p>I'm a designer and developer always looking for exciting projects to work on. I have over 10 years experience in user interface design and front-end development.</p>
-    <p>I like making clean and simple designs while making usability the priority.</p>
+    <h1 data-aos="fade-right">Lisandro Molina</h1>
+    <h2 data-aos="fade-right">Web Developer and UI/UX Designer</h2>
+    <p data-aos="fade-right">I'm a designer and developer always looking for exciting projects to work on. I have over 10 years experience in user interface design and front-end development.</p>
+    <p data-aos="fade-right">I like making clean and simple designs while making usability the priority.</p>
     <p id="linkbelow"><a href="#skills">Check out my skills and some of my works below</a></p>
   </section>
-  <section id="skills">
+  <section data-aos="fade-up"  id="skills">
     <h1>Some of my skills</h1>
     <h3>Languages &<br/> Markups</h3>
     <ul>
@@ -107,13 +82,13 @@
     </ul>
   </section>
   <section id="portfolio">
-    <h1>A selection of my work</h1>
-    <div class="work">
+    <h1 data-aos="fade-right">A selection of my work</h1>
+    <div data-aos="flip-right" class="work">
       <h3><a class="opentab" href="http://www.toshiroac.com" target="_blank" rel="noreferrer noopener">Toshiro AC</a></h3>
       <p>UI & UX Design, Bootstrap</p>
       <img src="/img/portfolio/toshiro.png" alt="Toshiro Website Design Thumbnail" />
     </div>
-    <div class="work">
+    <div data-aos="flip-right" class="work">
       <h3><a class="expand" href="#w1" rel="modal:open">BestCleaners</a></h3>
       <p>UI & UX Design</p>
       <img src="/img/portfolio/bestcleaners.png" alt="BestCleaners Website Design Thumbnail" />
@@ -122,7 +97,7 @@
         <img src="/img/portfolio/bestcleaners_full.jpg" alt="BestCleaners Website Mockup Design" />
       </div>
     </div>
-    <div class="work">
+    <div data-aos="flip-right" class="work">
       <h3><a class="expand" href="#w2" rel="modal:open">Kobi</a></h3>
       <p>UI & UX Design</p>
       <img src="/img/portfolio/kobi.png" alt="Kobi Wensite Design Thumbnail" />
@@ -131,7 +106,7 @@
         <img src="/img/portfolio/kobi_full.png" alt="Kobi Website Mockup Design" />
       </div>
     </div>
-    <div class="work">
+    <div data-aos="flip-right" class="work">
       <h3><a class="expand" href="#w3" rel="modal:open">RHS Tax Consultant</a></h3>
       <p>UI & UX Design</p>
       <img src="/img/portfolio/tax.png" alt="RHS Tax Consultant Design Thumbnail"/>
@@ -140,7 +115,7 @@
         <img src="/img/portfolio/tax_full.jpg" alt="RHS Tax Consultant Mockup Design" />
       </div>
     </div>
-    <div class="work soon">
+    <div data-aos="flip-right" class="work soon">
       <h3>PilipinasHotels</h3>
       <p>Coming Soon...</p>
     </div>
@@ -166,6 +141,9 @@
   }
 
 
+  </script>
+  <script>
+    AOS.init();
   </script>
 </body>
 </html>

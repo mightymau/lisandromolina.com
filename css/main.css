@@ -167,7 +167,7 @@ section {
   background: url("/img/letswork.png") no-repeat;
   background-position: -100px bottom;
   background-size: 65%;
-  height: 80vh;
+  min-height: 100vh;
 }
 
 #error404 {
